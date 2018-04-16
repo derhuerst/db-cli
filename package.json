@@ -1,0 +1,31 @@
+{
+	"name": "db-cli",
+	"description": "A CLI for Deutsche Bahn.",
+	"version": "1.0.0",
+	"bin": {
+		"db-dep": "./dep.js",
+		"db-journey": "./journey.js"
+	},
+	"files": [
+	],
+	"keywords": [
+		"db",
+		"deutsche bahn",
+		"cli",
+		"germany",
+		"public transport",
+		"transit"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/db-cli",
+	"repository": "git://github.com/derhuerst/db-cli.git",
+	"bugs": "https://github.com/derhuerst/db-cli/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	},
+	"scripts": {
+	}
+}

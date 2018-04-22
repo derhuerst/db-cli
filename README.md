@@ -21,7 +21,31 @@ Or just run it using [`npx`](https://npmjs.com/npx).
 ## Usage
 
 ```
-todo
+db-dep [station] [options]
+
+Arguments:
+    station         Station number (like 8000191) or search string (like "Karlsruhe Hbf").
+
+Options:
+    --location  -l  Use current location. OS X only.
+    --duration  -d  Show departures for the next n minutes. Default: 15
+    --when      -w  A date & time string like "tomorrow 2 pm". Default: now
+    --products  -p  Allowed transportation types.
+                    Default: ICE,IC,EC,RE,RB,IR,S,B,F,U,T,Taxi
+```
+
+```
+db-journey [origin] [destination] [options]
+
+Arguments:
+    origin          Station number (e.g. 8000191) or query (e.g. "Karlsruhe Hbf").
+    destination     Station number (e.g. 8000191) or query (e.g. "Karlsruhe Hbf").
+
+Options:
+    --results   -r  The number of journeys to show. Default: 4
+    --products  -p  Allowed transportation types.
+                    Default: ICE,IC,EC,RE,RB,IR,S,B,F,U,T,Taxi
+    --when      -w  A date & time string like "tomorrow 2 pm". Default: now
 ```
 
 

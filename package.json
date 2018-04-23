@@ -1,7 +1,7 @@
 {
 	"name": "db-cli",
 	"description": "A CLI for Deutsche Bahn.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"bin": {
 		"db-dep": "./dep.js",
 		"db-journey": "./journey.js"
@@ -34,5 +34,6 @@
 		"db-hafas": "^3.0.0-alpha.1"
 	},
 	"scripts": {
+		"test": "./dep.js 8000191 --when 'in 3min'"
 	}
 }

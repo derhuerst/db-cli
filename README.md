@@ -49,6 +49,15 @@ Options:
 ```
 
 
+## Related
+
+- [db-hafas](https://github.com/derhuerst/db-hafas) – JavaScript client for the DB HAFAS API.
+- [hafas-cli](https://github.com/derhuerst/hafas-cli) – Build a command line interface for any HAFAS endpoint.
+- [`1.db.transport.rest` *Deutsche Bahn* public transport API](https://github.com/derhuerst/db-rest/blob/master/docs/index.md)
+- [db-prices](https://github.com/juliuste/db-prices) – Find the cheapest routes using the DB Sparpreise API.
+- [db-stations](https://github.com/derhuerst/db-stations) – An offline list of all DB stations.
+- [vbb-cli](https://github.com/derhuerst/vbb-cli) – A CLI for Berlin & Brandenburg public transport.
+
 ## Contributing
 
 If you have a question or have difficulties using `db-cli`, please double-check your code and setup first. If you think you have found a bug or want to propose a feature, refer to [the issues page](https://github.com/derhuerst/db-cli/issues).

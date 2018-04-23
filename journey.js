@@ -8,6 +8,7 @@ const createJourneysCli = require('hafas-cli/journeys')
 
 const pkg = require('./package.json')
 const productColor = require('./lib/product-color')
+const productSymbol = require('./lib/product-symbol')
 
 const argv = mri(process.argv.slice(2), {
 	boolean: ['help', 'h', 'version', 'v', 'location', 'l']
@@ -43,7 +44,7 @@ const showError = function (err) {
 }
 
 const departuresCli = createJourneysCli(hafas, {
-	productColor,
+	productColor, productSymbol
 })
 departuresCli({
 	origin: argv._[0],

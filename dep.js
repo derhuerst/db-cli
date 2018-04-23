@@ -8,6 +8,7 @@ const createDeparturesCli = require('hafas-cli/departures')
 
 const pkg = require('./package.json')
 const productColor = require('./lib/product-color')
+const productSymbol = require('./lib/product-symbol')
 
 const argv = mri(process.argv.slice(2), {
 	boolean: [
@@ -47,7 +48,7 @@ const showError = function (err) {
 }
 
 const departuresCli = createDeparturesCli(hafas, {
-	productColor
+	productColor, productSymbol
 })
 departuresCli({
 	station: argv._[0],

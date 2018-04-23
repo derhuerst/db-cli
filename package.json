@@ -8,7 +8,8 @@
 	},
 	"files": [
 		"dep.js",
-		"journey.js"
+		"journey.js",
+		"lib"
 	],
 	"keywords": [
 		"db",
@@ -28,7 +29,7 @@
 	},
 	"dependencies": {
 		"chalk": "^2.3.2",
-		"hafas-cli": "^0.1.0",
+		"hafas-cli": "^0.1.1",
 		"mri": "^1.1.0",
 		"db-hafas": "^3.0.0-alpha.1"
 	},

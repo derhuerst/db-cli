@@ -7,6 +7,7 @@ const hafas = require('db-hafas')
 const createDeparturesCli = require('hafas-cli/departures')
 
 const pkg = require('./package.json')
+const productColor = require('./lib/product-color')
 
 const argv = mri(process.argv.slice(2), {
 	boolean: [
@@ -45,7 +46,9 @@ const showError = function (err) {
 	process.exit(err.code || 1)
 }
 
-const departuresCli = createDeparturesCli(hafas, {})
+const departuresCli = createDeparturesCli(hafas, {
+	productColor
+})
 departuresCli({
 	station: argv._[0],
 	useCurrentLocation: argv.location || argv.l,

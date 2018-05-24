@@ -11,7 +11,12 @@ const productColor = require('./lib/product-color')
 const productSymbol = require('./lib/product-symbol')
 
 const argv = mri(process.argv.slice(2), {
-	boolean: ['help', 'h', 'version', 'v', 'location', 'l']
+	boolean: [
+		'help', 'h',
+		'version', 'v',
+		'location', 'l',
+		'show-ids'
+	]
 })
 
 if (argv.help || argv.h) {
@@ -27,6 +32,7 @@ Options:
     --products  -p  Allowed transportation types.
                     Default: ICE,IC,EC,RE,RB,IR,S,B,F,U,T,Taxi
     --when      -w  A date & time string like "tomorrow 2 pm". Default: now
+    --show-ids      Show station & journey leg IDs. Default: false
 
 `)
 	process.exit(0)
@@ -43,10 +49,11 @@ const showError = function (err) {
 	process.exit(err.code || 1)
 }
 
-const departuresCli = createJourneysCli(hafas, {
-	productColor, productSymbol
+const journeysCli = createJourneysCli(hafas, {
+	productColor, productSymbol,
+	showLocationIds: argv['show-ids'], showJourneyLegIds: argv['show-ids']
 })
-departuresCli({
+journeysCli({
 	origin: argv._[0],
 	destination: argv._[1],
 	results: argv.results || argv.r || 4,

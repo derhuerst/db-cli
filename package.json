@@ -1,7 +1,7 @@
 {
 	"name": "db-cli",
 	"description": "A CLI for Deutsche Bahn.",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"bin": {
 		"db-dep": "./dep.js",
 		"db-journey": "./journey.js"
@@ -29,7 +29,7 @@
 	},
 	"dependencies": {
 		"chalk": "^2.3.2",
-		"hafas-cli": "^0.1.1",
+		"hafas-cli": "^0.2.0",
 		"mri": "^1.1.0",
 		"db-hafas": "^3.0.0-alpha.1"
 	},

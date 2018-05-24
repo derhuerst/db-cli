@@ -14,7 +14,8 @@ const argv = mri(process.argv.slice(2), {
 	boolean: [
 		'help', 'h',
 		'version', 'v',
-		'location', 'l'
+		'location', 'l',
+		'show-ids'
 	]
 })
 
@@ -31,6 +32,7 @@ Options:
     --when      -w  A date & time string like "tomorrow 2 pm". Default: now
     --products  -p  Allowed transportation types.
                     Default: ICE,IC,EC,RE,RB,IR,S,B,F,U,T,Taxi
+    --show-ids      Show station & journey leg IDs. Default: false
 
 `)
 	process.exit(0)
@@ -48,7 +50,8 @@ const showError = function (err) {
 }
 
 const departuresCli = createDeparturesCli(hafas, {
-	productColor, productSymbol
+	productColor, productSymbol,
+	showLocationIds: argv['show-ids'], showJourneyLegIds: argv['show-ids']
 })
 departuresCli({
 	station: argv._[0],

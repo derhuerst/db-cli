@@ -31,7 +31,7 @@
 		"chalk": "^2.3.2",
 		"hafas-cli": "^0.2.0",
 		"mri": "^1.1.0",
-		"db-hafas": "^3.0.0-alpha.1"
+		"db-hafas": "^3.0.1"
 	},
 	"scripts": {
 		"test": "./dep.js 8000191 --when 'in 3min'"
